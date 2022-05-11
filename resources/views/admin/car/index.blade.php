@@ -1,0 +1,128 @@
+
+@extends('admin.master')
+@section('content')
+
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-9"><h1 class="card-title">  </h1></div>
+                    <div class="col-md-1">
+                        <a class="btn btn-primary" href="{{route('admin.car.create')}}">
+                            <span class="btn-label">
+                                <i class="fa fa-plus"></i>
+                            </span>
+                            Qoshish
+                        </a>
+                    </div>
+                </div>
+                <hr>
+                <div class="">
+                    <table width="90%" class="table-bordered table-striped" id="mytable">
+                        <thead>
+{{--                        'year','yurgani','model','company','number','type_fuel','pass_number','price','status'--}}
+                        <tr >
+                            <th>year</th>
+                            <th>yurgani </th>
+                            <th>model</th>
+                            <th>company</th>
+                            <th>number</th>
+                            <th>type_fuel</th>
+                            <th>pass_number</th>
+                            <th>price</th>
+                            <th>status</th>
+                            <th>img</th>
+                            <th>amallar</th>
+
+                        </tr>
+
+                        </thead>
+                        <tbody>
+
+
+                        @foreach($cars as $car)
+
+                            <tr  >
+                                <td>
+                                    {{$car->year}}
+                                </td>
+                                <td>
+                                    {{$car->yurgani}}
+                                </td>
+                                <td>
+                                    {{$car->model}}
+                                </td>
+                                <td>
+                                    {{$car->company}}
+                                </td>
+                                <td>
+                                    {{$car->number}}
+                                </td>
+                                <td>
+                                    {{$car->type_fuel}}
+                                </td>
+                                <td>
+                                    {{$car->pass_number}}
+                                </td>
+                                <td>
+                                    {{$car->price}}
+                                </td>
+
+                                <td>
+                                    {{$car->status}}
+                                </td>
+                                <td>
+                                    <img src="{{asset($car->img1)}}" width="100%" height="50px" alt="">
+                                </td>
+
+                                    <td>
+                                        <form action="{{ route('admin.car.destroy',$car ->id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <div class="dinayquy">
+                                            <div class=" btn-group" role="group">
+                                            <a class="btn btn-warning btn-sm" href="{{ route('admin.car.edit',$car->id) }}">
+                                    <span class="btn-label">
+                                        <i class="fa fa-pen"></i>
+                                    </span>
+                                            </a>
+                                            <button type="submit" class="btn btn-danger btn-sm"><span class="btn-label">
+                                        <i class="fa fa-trash"></i>
+                                    </span></button>
+                                            </div>
+                                            </div>
+                                        </form>
+                                    </td>
+
+                            </tr>
+                        @endforeach
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="{{asset('/assets/js/core/jquery.3.2.1.min.js')}}"></script>
+<script>
+    $(document).ready( function () {
+    $('#mytable').DataTable({
+        "language": {
+            "lengthMenu": "_MENU_",
+            "zeroRecords": " ",
+            "info": "_PAGE_ / _PAGES_",
+            "infoEmpty": " ",
+            "search":"Qidirish:",
+            "paginate": {
+                "first": "биринчи",
+                "previous": "олдинги",
+                "next": "кейинки",
+                "last": "охирги"
+            },
+        }});
+} );
+</script>
+@endsection
+

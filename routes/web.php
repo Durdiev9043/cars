@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\CarController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +20,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::prefix('admin')->name('admin.')->middleware(['web', 'auth'])->group(function () {
+Route::resource('users',UsersController::class);
+Route::resource('car',CarController::class);
+Route::resource('client',ClientController::class);
+Route::resource('booking',BookingController::class);
+});
+
