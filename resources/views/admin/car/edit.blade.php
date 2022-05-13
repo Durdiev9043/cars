@@ -21,35 +21,71 @@
                     @endif
 
 
-                    <form action="{{route('admin.car.update',$product->id)}}" method="POST" accept-charset="UTF-8"
+                    <form action="{{route('admin.car.update',$car->id)}}" method="POST" accept-charset="UTF-8"
                           enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
 
                         <div class="form-group">
-                            <label for="header_ru">Domen nomi</label>
-                            <input type="text" name="domen_name" value="{{ $product->domen_name }}"  class="form-control" placeholder="">
+                            <label for="">Yili</label>
+                            <input type="text" name="years" value="{{ $car->year }}" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">Tashkilot nomi</label>
-                            <input type="text" name="organization" value="{{ $product->organization }}" class="form-control" placeholder="">
+                            <label for="header_ru">Yurgani</label>
+                            <input type="text" name="yurgani" value="{{ $car->yurgani }}" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">Telefon</label>
-                            <input type="tel" name="phone" pattern="{0,9}[9]" value="{{ $product->phone }}" class="form-control"  placeholder="">
+                            <label for="header_ru">modeli</label>
+                            <input type="text" name="model" value="{{ $car->model }}" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">domen yaratilgan sana</label>
-                            <input type="date" name="from_domen" value="{{Carbon\Carbon::parse($product->from_domen)->format("Y-m-d")  }}" class="form-control" placeholder="">
+                            <label for="header_ru">Ishlab chiqargan kampanya</label>
+                            <input type="text" name="company" value="{{ $car->company }}" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">tugash vaqti</label>
-                            <input type="date" name="to_domen" value="{{Carbon\Carbon::parse($product->to_domen)->format("Y-m-d")  }}" class="form-control"  placeholder="">
+                            <label for="header_ru">raqami</label>
+                            <input type="text" name="number" value="{{ $car->number }}" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">	izoh</label>
-                            <input type="text" name="annotation" value="{{ $product->annotation }}" class="form-control" id="header_ru" placeholder="номи">
+                            <label for="header_ru">Yoqilg`i turi</label>
+                            <input type="text" name="type_fuel" value="{{ $car->type_fuel }}" class="form-control" placeholder="">
                         </div>
+                        <div class="form-group">
+                            <label for="header_ru">Texnik passport seriasi va raqami</label>
+                            <input type="text" name="pass_number" value="{{ $car->pass_number }}" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="header_ru">Narxi</label>
+                            <input type="text" name="price" value="{{ $car->price }}" class="form-control" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="img1">surati</label>
+                            <input type="file" name="img1"  class="form-control" id="img1"  >
+                        </div>
+                        <div class="form-group">
+                            <label for="img1">surati 2</label>
+                            <input type="file" name="img2"  class="form-control" id="img1"  >
+                        </div>
+                        <div class="form-group">
+                            <label for="img1">surati 3</label>
+                            <input type="file" name="img3"  class="form-control" id="img1"  >
+                        </div>
+                        <div class="form-group">
+                            <label for="img1">surati 4</label>
+                            <input type="file" name="img4"  class="form-control" id="img1"  >
+                        </div>
+
+                        <div class="form-group">
+                            <?php
+                            $x=(integer)$car->status;
+                            ?>
+                            <label for="header_ru">holati {{ $car->bron[$x] }}</label>
+{{--                            <input type="text" name="status" disabled value="{{ $car->status }}" class="form-control" placeholder="">--}}
+                        </div>
+
+
+
+
 
                         <button type="submit" id="alert" class="btn btn-primary">Submit</button>
                         <input type="reset" class="btn btn-danger" value="Очистить">

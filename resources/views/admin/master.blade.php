@@ -78,6 +78,7 @@
 
     <div class="main-panel">
         <div class="content">
+            @include('alert')
                 @yield('content')
         </div>
     </div>

@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\BladeController::class,'index'])->name('index');
+Route::get('/booking/{id}', [\App\Http\Controllers\BladeController::class,'booking'])->name('booking.create');
+Route::post('/store', [\App\Http\Controllers\BladeController::class,'store'])->name('booking.store');
+
 
 Auth::routes();
 

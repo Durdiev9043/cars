@@ -18,20 +18,20 @@
                 </div>
                 <hr>
                 <div class="">
-                    <table width="90%" class="table-bordered table-striped" id="mytable">
+                    <table width="100%" class="table-bordered table-striped" id="mytable">
                         <thead>
 {{--                        'year','yurgani','model','company','number','type_fuel','pass_number','price','status'--}}
                         <tr >
-                            <th>year</th>
-                            <th>yurgani </th>
-                            <th>model</th>
-                            <th>company</th>
-                            <th>number</th>
-                            <th>type_fuel</th>
-                            <th>pass_number</th>
-                            <th>price</th>
-                            <th>status</th>
-                            <th>img</th>
+                            <th>Yili</th>
+                            <th>Yurgani</th>
+                            <th>Modeli</th>
+                            <th>Ishlab chiqargan kampnaya</th>
+                            <th>Raqami</th>
+                            <th>Yoqilg`i turi</th>
+                            <th>Texnik passport <br>seriasi va raqami</th>
+                            <th>Narxi</th>
+                            <th>Holati</th>
+                            <th>Surati</th>
                             <th>amallar</th>
 
                         </tr>
@@ -69,7 +69,10 @@
                                 </td>
 
                                 <td>
-                                    {{$car->status}}
+                                    <?php
+                                    $x=(integer)$car->status;
+                                    ?>
+                                    {{$car->bron[$x]}}
                                 </td>
                                 <td>
                                     <img src="{{asset($car->img1)}}" width="100%" height="50px" alt="">

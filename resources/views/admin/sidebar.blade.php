@@ -15,10 +15,10 @@
                         <p>Avtomabillar</p>
                     </a>
                 </li>
-                <li class="nav-item {{  request()->routeIs('admin.car.index') ? 'active' : '' }}">
-                    <a href="{{route('admin.car.index')}}">
-                        <i class="fa fa-tasks" aria-hidden="true"></i>
-                        <p>Navbatlar</p>
+                <li class="nav-item {{  request()->routeIs('admin.client.index') ? 'active' : '' }}">
+                    <a href="{{route('admin.client.index')}}">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <p>Haridorlar</p>
                     </a>
                 </li>
             </ul>

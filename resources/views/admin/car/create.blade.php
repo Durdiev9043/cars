@@ -78,7 +78,7 @@
 
                         <div class="form-group">
                             <label for="header_ru">status</label>
-                            <input type="text" name="year" class="form-control" placeholder="">
+                            <input type="text" name="status" class="form-control" placeholder="">
                         </div>
 
 

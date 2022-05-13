@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ClientController extends Controller
 {
     public function index()
     {
-        $clients=Client::all();
+        $clients=Booking::all();
         return view('admin.client.index',['clients'=>$clients]);
     }
 
@@ -46,7 +48,12 @@ class ClientController extends Controller
 
     public function destroy(Client $client)
     {
-        $client->delete();
-        return redirect()->back()->with('sucsess','O`chirildi');
+//       Booking::all()->where('client_id',$client->id)->first()->delete();
+//       $client->delete();
+       if (Booking::all()->where('client_id',$client->id)->first()->delete()){
+           if ($client->delete()){
+               return redirect()->back()-with('success','yarding');
+           }
+       }
     }
 }
