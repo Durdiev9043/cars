@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('cars', function (Blueprint $table) {
             //'year','yurgani','model','company','number','type_fuel','pass_number','price','status'
             $table->id();
-            $table->string('years')->nullable();
+            $table->string('year')->nullable();
             $table->integer('yurgani')->nullable();
             $table->string('model')->nullable();
             $table->string('company');
@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('type_fuel')->nullable();
             $table->string('pass_number')->nullable();
             $table->integer('price');
-            $table->tinyInteger('status')->default(0);
+            $table->tinyInteger('status')->nullable();
             $table->string('img1');
             $table->string('img2')->nullable();
             $table->string('img4')->nullable();

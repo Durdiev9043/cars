@@ -80,6 +80,10 @@
                             $x=(integer)$car->status;
                             ?>
                             <label for="header_ru">holati {{ $car->bron[$x] }}</label>
+                                <select name="status" class="form-control" id="">
+                                    <option value="0">bosh</option>
+                                    <option value="1">band</option>
+                                </select>
 {{--                            <input type="text" name="status" disabled value="{{ $car->status }}" class="form-control" placeholder="">--}}
                         </div>
 

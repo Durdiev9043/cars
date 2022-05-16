@@ -10,8 +10,13 @@ use Illuminate\Http\Request;
 class BladeController extends Controller
 {
     public function index(){
+        $books=Booking::all()->where('from_date',now());
+        foreach ($books as $book){
+            Car::all()->where('id',$book->car_id)->first()->update(['status'=>1]);
+        }
         $cars=Car::all()->where('status',0);
-        return view('welcome',['cars'=>$cars]);
+        $bookings=Booking::all();
+        return view('welcome',['cars'=>$cars,'bookings'=>$bookings]);
     }
 
     public function booking($id){
@@ -30,6 +35,7 @@ class BladeController extends Controller
             'client_id'=>$id,
             'to_date'=>$request->to_date,
             'from_date'=>$request->from_date,
+            'status'=>$request->status
         ]);
 //        Car::all()->where('id',$request->car_id)->first()->update(['status'=>1]);
         return redirect()->route('index');

@@ -18,16 +18,16 @@
                     </div>
                     <div class="card-body row">
                         <div class="col-6">
-                            <img src="{{asset($car->img1)}}" width="170px" height="150px" alt="">
+                            <img src="{{asset($car->img1)}}" width="50%" height="150px" alt="">
                         </div>
                         <div class="col-6">
-                            <img src="{{asset($car->img2)}}" width="170px" height="150px" alt="">
+                            <img src="{{asset($car->img2)}}" width="50%" height="150px" alt="">
                         </div>
                         <div class="col-6">
-                            <img src="{{asset($car->img3)}}" width="170px" height="150px" alt="">
+                            <img src="{{asset($car->img3)}}" width="50%" height="150px" alt="">
                         </div>
                         <div class="col-6">
-                            <img src="{{asset($car->img4)}}" width="170px" height="150px" alt="">
+                            <img src="{{asset($car->img4)}}" width="50%" height="150px" alt="">
                         </div>
                         <form action="{{ route('booking.store') }}" method="post">
                             @csrf
@@ -35,7 +35,7 @@
                             <input type="hidden" name="car_id" value="{{$car->id}}">
                             <div class="form-group">
                                 <label for="">I.F.SH</label>
-                                <input type="text" class="form-control" name="fullname" placeholder="">
+                                <input type="text" class="form-control" name="full_name" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="">Guvohnoma seriasi va raqami</label>
@@ -54,6 +54,7 @@
                                 <label for="">Qachon gacha</label>
                                 <input type="date" class="form-control" name="from_date" placeholder="">
                             </div>
+                            <input type="hidden"  name="status" value="0">
 
                             <div align="center">
 

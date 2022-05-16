@@ -28,35 +28,35 @@
 
 
                         <div class="form-group">
-                            <label for="">year</label>
+                            <label for="">Yili</label>
                             <input type="text" name="years" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">yurgani</label>
+                            <label for="header_ru">Yurgani</label>
                             <input type="text" name="yurgani" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">model</label>
+                            <label for="header_ru">modeli</label>
                             <input type="text" name="model" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">company</label>
+                            <label for="header_ru">Ishlab chiqargan kompaniyasi</label>
                             <input type="text" name="company" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">number</label>
+                            <label for="header_ru">Avtomabil raqami</label>
                             <input type="text" name="number" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">type_fuel</label>
+                            <label for="header_ru">Yoqilg`i turi</label>
                             <input type="text" name="type_fuel" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">pass_number</label>
+                            <label for="header_ru">Texnik passport seriasi va raqami</label>
                             <input type="text" name="pass_number" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">price</label>
+                            <label for="header_ru">Bir kunlik narxi</label>
                             <input type="text" name="price" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
@@ -64,22 +64,22 @@
                             <input type="file" name="img1" required class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati2</label>
+                            <label for="img1">surati 2</label>
                             <input type="file" name="img2"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati3</label>
+                            <label for="img1">surati 3</label>
                             <input type="file" name="img3"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati4</label>
+                            <label for="img1">surati 4</label>
                             <input type="file" name="img4"  class="form-control" id="img1"  >
                         </div>
 
-                        <div class="form-group">
-                            <label for="header_ru">status</label>
-                            <input type="text" name="status" class="form-control" placeholder="">
-                        </div>
+{{--                        <div class="form-group">--}}
+{{--                            <label for="header_ru">status</label>--}}
+{{--                            <input type="text" name="status" class="form-control" placeholder="">--}}
+{{--                        </div>--}}
 
 
 

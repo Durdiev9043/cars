@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Laravel</title>
 
@@ -436,11 +436,11 @@
         </div>
     </nav>
 
-    <div id="carouselExampleControls" class="carousel slide"
+    <div id="carouselExampleControls" class=""
          style="background: url(https://media.istockphoto.com/photos/city-skyline-and-buildings-with-empty-asphalt-road-at-sunrise-picture-id1091165998?k=20&m=1091165998&s=612x612&w=0&h=atJ3cWzKJkC05khff9egP7Oq6UikVVghxLjVePt1DRY=);background-position: center; background-repeat: no-repeat;background-size: cover; "
-         data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
+         data-ride="">
+        <div class="">
+            <div class="">
                 {{--                                <img src="https://media.istockphoto.com/photos/city-skyline-and-buildings-with-empty-asphalt-road-at-sunrise-picture-id1091165998?k=20&m=1091165998&s=612x612&w=0&h=atJ3cWzKJkC05khff9egP7Oq6UikVVghxLjVePt1DRY=" class="d-block w-100" style=" filter: brightness(0.5) contrast(1.1)"   alt="...">--}}
 
                         @include('alert')

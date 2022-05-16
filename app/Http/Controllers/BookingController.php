@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 
+use App\Models\Car;
 use App\Models\Client;
 use Illuminate\Http\Request;
 
@@ -50,6 +51,7 @@ class BookingController extends Controller
     {
         $booking->delete();
         Client::all()->where('id', $booking->client_id)->first()->delete();
+        Car::all()->where('id',$booking->car_id)->first()->update(['status'=>0]);
         return redirect()->back()->with('success', 'O`chirildi');
 
     }
