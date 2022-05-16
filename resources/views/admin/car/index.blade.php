@@ -1,4 +1,3 @@
-
 @extends('admin.master')
 @section('content')
 
@@ -6,7 +5,7 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-9"><h1 class="card-title">  </h1></div>
+                    <div class="col-9"><h1 class="card-title"></h1></div>
                     <div class="col-md-1">
                         <a class="btn btn-primary" href="{{route('admin.car.create')}}">
                             <span class="btn-label">
@@ -20,8 +19,8 @@
                 <div class="">
                     <table width="100%" class="table-bordered table-striped" id="mytable">
                         <thead>
-{{--                        'year','yurgani','model','company','number','type_fuel','pass_number','price','status'--}}
-                        <tr >
+                        {{--                        'year','yurgani','model','company','number','type_fuel','pass_number','price','status'--}}
+                        <tr>
                             <th>Yili</th>
                             <th>Yurgani</th>
                             <th>Modeli</th>
@@ -42,7 +41,7 @@
 
                         @foreach($cars as $car)
 
-                            <tr  >
+                            <tr>
                                 <td>
                                     {{$car->year}}
                                 </td>
@@ -70,7 +69,7 @@
 
                                 <td>
                                     <?php
-                                    $x=(integer)$car->status;
+                                    $x = (integer)$car->status;
                                     ?>
                                     {{$car->bron[$x]}}
                                 </td>
@@ -78,24 +77,26 @@
                                     <img src="{{asset($car->img1)}}" width="100%" height="50px" alt="">
                                 </td>
 
-                                    <td>
-                                        <form action="{{ route('admin.car.destroy',$car ->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <div class="dinayquy">
+                                <td>
+                                    <form action="{{ route('admin.car.destroy',$car ->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <div class="dinayquy">
                                             <div class=" btn-group" role="group">
-                                            <a class="btn btn-warning btn-sm" href="{{ route('admin.car.edit',$car->id) }}">
+                                                <a class="btn btn-warning btn-sm"
+                                                   href="{{ route('admin.car.edit',$car->id) }}">
                                     <span class="btn-label">
                                         <i class="fa fa-pen"></i>
                                     </span>
-                                            </a>
-                                            <button type="submit" class="btn btn-danger btn-sm"><span class="btn-label">
+                                                </a>
+                                                <button type="submit" class="btn btn-danger btn-sm"><span
+                                                        class="btn-label">
                                         <i class="fa fa-trash"></i>
                                     </span></button>
                                             </div>
-                                            </div>
-                                        </form>
-                                    </td>
+                                        </div>
+                                    </form>
+                                </td>
 
                             </tr>
                         @endforeach
@@ -108,24 +109,25 @@
     </div>
 
 
-<script src="{{asset('/assets/js/core/jquery.3.2.1.min.js')}}"></script>
-<script>
-    $(document).ready( function () {
-    $('#mytable').DataTable({
-        "language": {
-            "lengthMenu": "_MENU_",
-            "zeroRecords": " ",
-            "info": "_PAGE_ / _PAGES_",
-            "infoEmpty": " ",
-            "search":"Qidirish:",
-            "paginate": {
-                "first": "биринчи",
-                "previous": "олдинги",
-                "next": "кейинки",
-                "last": "охирги"
-            },
-        }});
-} );
-</script>
+    <script src="{{asset('/assets/js/core/jquery.3.2.1.min.js')}}"></script>
+    <script>
+        $(document).ready(function () {
+            $('#mytable').DataTable({
+                "language": {
+                    "lengthMenu": "_MENU_",
+                    "zeroRecords": " ",
+                    "info": "_PAGE_ / _PAGES_",
+                    "infoEmpty": " ",
+                    "search": "Qidirish:",
+                    "paginate": {
+                        "first": "биринчи",
+                        "previous": "олдинги",
+                        "next": "кейинки",
+                        "last": "охирги"
+                    },
+                }
+            });
+        });
+    </script>
 @endsection
 

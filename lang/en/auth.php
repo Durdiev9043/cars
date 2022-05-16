@@ -13,8 +13,8 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
-    'password' => 'The provided password is incorrect.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
+    'failed' => 'Bu hisobga olish ma\'lumotlari bizning yozuvlarni mos emas.',
+    'password' => 'Taqdim etilgan parol noto\'g\'ri.',
+    'throttle' => 'Kirish urinishlari juda ko\'p. Yana urinib ko\'ring: soniya soniya.',
 
 ];
