@@ -3,7 +3,7 @@
 
     <div class="col-md-12">
         <div class="card">
-            <div class="card-header">
+            <div class="card-header" STYLE="padding: 5px !important;">
                 <div class="row">
                     <div class="col-9"><h1 class="card-title"></h1></div>
                     <div class="col-md-1">
@@ -22,14 +22,14 @@
                         {{--                        'year','yurgani','model','company','number','type_fuel','pass_number','price','status'--}}
                         <tr>
                             <th>I.F.SH</th>
-                            <th>Guvohnoma <br>seriasi va raqami</th>
-                            <th>Passport<br>seriasi va raqami</th>
+{{--                            <th>Guvohnoma <br>seriasi va raqami</th>--}}
+{{--                            <th>Passport<br>seriasi va raqami</th>--}}
                             <th>Avtomabil<br>raqami</th>
-                            <th>texnik passport<br> seriasi va raqami</th>
+{{--                            <th>texnik passport<br> seriasi va raqami</th>--}}
                             <th>Avtomabil</th>
-                            <th>Qachondan boshlab</th>
-                            <th>Qachon gacha</th>
-                            <th>To`lov haqida malumot</th>
+{{--                            <th>Qachondan boshlab</th>--}}
+{{--                            <th>Qachon gacha</th>--}}
+{{--                            <th>To`lov haqida malumot</th>--}}
                             <th>amallar</th>
 
                         </tr>
@@ -44,38 +44,38 @@
                                 <td>
                                     {{$client->client->full_name}}
                                 </td>
-                                <td>
-                                    {{$client->client->certificate}}
-                                </td>
-                                <td>
-                                    {{$client->client->passport}}
-                                </td>
+{{--                                <td>--}}
+{{--                                    {{$client->client->certificate}}--}}
+{{--                                </td>--}}
+{{--                                <td>--}}
+{{--                                    {{$client->client->passport}}--}}
+{{--                                </td>--}}
                                 <td>
                                     {{$client->car->number}}
                                 </td>
-                                <td>
-                                    {{$client->car->pass_number}}
-                                </td>
+{{--                                <td>--}}
+{{--                                    {{$client->car->pass_number}}--}}
+{{--                                </td>--}}
                                 <td>
                                     {{$client->car->company}}
 
                                     {{$client->car->model}}
                                 </td>
-                                <td>
-                                    {{Carbon\Carbon::parse($client->to_date)->format("d-M Y")}}
-                                </td>
-                                <td>
-                                    {{Carbon\Carbon::parse($client->from_date)->format("d-M Y")}}
-                                </td>
+{{--                                <td>--}}
+{{--                                    {{Carbon\Carbon::parse($client->to_date)->format("d-M Y")}}--}}
+{{--                                </td>--}}
+{{--                                <td>--}}
+{{--                                    {{Carbon\Carbon::parse($client->from_date)->format("d-M Y")}}--}}
+{{--                                </td>--}}
 
 
-                                <td>
-                                    <?php
-                                    $x = (int)$client->status;
-                                    echo $client->st[$x];
-                                    ?>
-                                    {{--                                    {{ $client->st[$x] }}--}}
-                                </td>
+{{--                                <td>--}}
+{{--                                    <?php--}}
+{{--                                    $x = (int)$client->status;--}}
+{{--                                    echo $client->st[$x];--}}
+{{--                                    ?>--}}
+{{--                                    --}}{{--                                    {{ $client->st[$x] }}--}}
+{{--                                </td>--}}
 
 
                                 <td>
@@ -83,13 +83,15 @@
                                         @csrf
                                         @method('DELETE')
                                         <div class="dinayquy">
-                                            <div class=" btn-group" role="group">
+                                            <div class=" " role="group">
                                                 <a class="btn btn-warning btn-sm"
                                                    href="{{ route('admin.booking.edit',$client->id) }}">
                                     <span class="btn-label">
                                         <i class="fa fa-pen"></i>
                                     </span>
                                                 </a>
+                                                <a href="{{ route('admin.booking.show',$client->id) }}" class="btn btn-light mt-2 btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></a><br>
+
                                                 <button type="submit" class="btn btn-danger btn-sm"><span
                                                         class="btn-label">
                                         <i class="fa fa-trash"></i>

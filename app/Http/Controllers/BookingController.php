@@ -29,9 +29,9 @@ class BookingController extends Controller
     }
 
 
-    public function show($id)
+    public function show(Booking $booking)
     {
-        //
+        return view('admin.client.show',['client'=>$booking]);
     }
 
 
