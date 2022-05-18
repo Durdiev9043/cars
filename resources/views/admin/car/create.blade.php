@@ -11,7 +11,7 @@
 
                     @if ($errors->any())
                         <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                            <strong>Whoops!</strong> Quyidagi xatoliklarni tekshiring.<br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
@@ -36,7 +36,7 @@
                             <input type="text" name="yurgani" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">modeli</label>
+                            <label for="header_ru">Modeli</label>
                             <input type="text" name="model" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
@@ -52,7 +52,7 @@
                             <input type="text" name="type_fuel" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">Texnik passport seriasi va raqami</label>
+                            <label for="header_ru">Texnik passport seriyasi va raqami</label>
                             <input type="text" name="pass_number" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
@@ -60,19 +60,19 @@
                             <input type="text" name="price" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati</label>
+                            <label for="img1">Surati</label>
                             <input type="file" name="img1" required class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati 2</label>
+                            <label for="img1">Surati 2</label>
                             <input type="file" name="img2"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati 3</label>
+                            <label for="img1">Surati 3</label>
                             <input type="file" name="img3"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati 4</label>
+                            <label for="img1">Surati 4</label>
                             <input type="file" name="img4"  class="form-control" id="img1"  >
                         </div>
 
@@ -84,8 +84,8 @@
 
 
 
-                        <button type="submit" id="alert" class="btn btn-primary">Submit</button>
-                        <input type="reset" class="btn btn-danger" value="Очистить">
+                        <button type="submit" id="alert" class="btn btn-primary">Saqlash</button>
+                        <input type="reset" class="btn btn-danger" value="Tozalash">
                     </form>
                 </div>
             </div>

@@ -55,7 +55,7 @@
                             <td>{{$client->client->full_name}}</td>
                         </tr>
                         <tr>
-                            <td>guvohnoma</td>
+                            <td>Guvohnoma</td>
                             <td> {{$client->client->certificate}}</td>
                         </tr>
                         <tr>
@@ -83,7 +83,7 @@
                             <td> {{Carbon\Carbon::parse($client->to_date)->format("d-M Y")}}</td>
                         </tr>
                         <tr>
-                            <td>Tolov haqida malumot</td>
+                            <td>To'lov haqida malumot</td>
                             <td>
                                 <?php
                                 $x = (integer)$client->status;

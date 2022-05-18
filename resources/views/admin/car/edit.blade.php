@@ -11,7 +11,7 @@
 
                     @if ($errors->any())
                         <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                            <strong>Xatolik!!!</strong>Quyidagi xatoliklarni tekshiring.<br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
@@ -35,7 +35,7 @@
                             <input type="text" name="yurgani" value="{{ $car->yurgani }}" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">modeli</label>
+                            <label for="header_ru">Modeli</label>
                             <input type="text" name="model" value="{{ $car->model }}" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
@@ -43,7 +43,7 @@
                             <input type="text" name="company" value="{{ $car->company }}" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="header_ru">raqami</label>
+                            <label for="header_ru">Raqami</label>
                             <input type="text" name="number" value="{{ $car->number }}" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
@@ -59,19 +59,19 @@
                             <input type="text" name="price" value="{{ $car->price }}" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati</label>
+                            <label for="img1">Surati</label>
                             <input type="file" name="img1"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati 2</label>
+                            <label for="img1">Surati 2</label>
                             <input type="file" name="img2"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati 3</label>
+                            <label for="img1">Surati 3</label>
                             <input type="file" name="img3"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
-                            <label for="img1">surati 4</label>
+                            <label for="img1">Surati 4</label>
                             <input type="file" name="img4"  class="form-control" id="img1"  >
                         </div>
 
@@ -79,10 +79,10 @@
                             <?php
                             $x=(integer)$car->status;
                             ?>
-                            <label for="header_ru">holati {{ $car->bron[$x] }}</label>
+                            <label for="header_ru">Holati {{ $car->bron[$x] }}</label>
                                 <select name="status" class="form-control" id="">
-                                    <option value="0">bosh</option>
-                                    <option value="1">band</option>
+                                    <option value="0">Bo'sh</option>
+                                    <option value="1">Band</option>
                                 </select>
 {{--                            <input type="text" name="status" disabled value="{{ $car->status }}" class="form-control" placeholder="">--}}
                         </div>
@@ -91,8 +91,8 @@
 
 
 
-                        <button type="submit" id="alert" class="btn btn-primary">Submit</button>
-                        <input type="reset" class="btn btn-danger" value="Очистить">
+                        <button type="submit" id="alert" class="btn btn-primary">Saqlash</button>
+                        <input type="reset" class="btn btn-danger" value="Tozalash">
                     </form>
                 </div>
             </div>

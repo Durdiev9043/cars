@@ -4,14 +4,14 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-10"><h1 class="card-title">Кластер</h1></div>
+                    <div class="col-10"><h1 class="card-title">Klaster</h1></div>
                 </div>
                 <hr>
                 <div class="card-body">
 
                     @if ($errors->any())
                         <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                            <strong>Xatolik!!!</strong>Quyidagi xatoliklarni tekshiring<br><br>
                             <ul>
                                 @foreach ($errors->all() as $error)
                                     <li>{{ $error }}</li>
@@ -26,7 +26,7 @@
                         @csrf
 
                         <div class="form-group">
-                            <label for="header_ru">номи</label>
+                            <label for="header_ru">Nomi</label>
                             <input type="text" name="name" class="form-control" id="header_ru" placeholder="номи">
                         </div>
                         <div class="form-group">
@@ -54,8 +54,8 @@
 
 
 
-                        <button type="submit" id="alert" class="btn btn-primary">Submit</button>
-                        <input type="reset" class="btn btn-danger" value="Очистить">
+                        <button type="submit" id="alert" class="btn btn-primary">Saqlash</button>
+                        <input type="reset" class="btn btn-danger" value="Tozalash">
                     </form>
                 </div>
             </div>

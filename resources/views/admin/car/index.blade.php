@@ -31,7 +31,7 @@
 {{--                            <th>Narxi</th>--}}
 {{--                            <th>Holati</th>--}}
 {{--                            <th>Surati</th>--}}
-                            <th>amallar</th>
+                            <th>Amallar</th>
 
                         </tr>
 

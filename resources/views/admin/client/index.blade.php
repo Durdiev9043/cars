@@ -21,7 +21,7 @@
                         <thead>
                         {{--                        'year','yurgani','model','company','number','type_fuel','pass_number','price','status'--}}
                         <tr>
-                            <th>I.F.SH</th>
+                            <th>F.I.SH</th>
 {{--                            <th>Guvohnoma <br>seriasi va raqami</th>--}}
 {{--                            <th>Passport<br>seriasi va raqami</th>--}}
                             <th>Avtomabil<br>raqami</th>
@@ -30,7 +30,7 @@
 {{--                            <th>Qachondan boshlab</th>--}}
 {{--                            <th>Qachon gacha</th>--}}
 {{--                            <th>To`lov haqida malumot</th>--}}
-                            <th>amallar</th>
+                            <th>Amallar</th>
 
                         </tr>
 
