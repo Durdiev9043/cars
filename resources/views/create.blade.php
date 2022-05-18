@@ -17,7 +17,32 @@
 
                     </div>
                     <div class="card-body row">
-                        <div class="col-6">
+                        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="{{asset($car->img1)}}" class="d-block w-100" style="height: 160px" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{asset($car->img2)}}" class="d-block w-100" alt="..." style="height: 160px">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{asset($car->img3)}}" class="d-block w-100" alt="..." style="height: 160px">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="{{asset($car->img4)}}" class="d-block w-100" alt="..." style="height: 160px">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+
+                    {{--    <div class="col-6">
                             <img src="{{asset($car->img1)}}" width="50%" height="150px" alt="">
                         </div>
                         <div class="col-6">
@@ -28,7 +53,7 @@
                         </div>
                         <div class="col-6">
                             <img src="{{asset($car->img4)}}" width="50%" height="150px" alt="">
-                        </div>
+                        </div>--}}
                         <form action="{{ route('booking.store') }}" method="post">
                             @csrf
                             @method('POST')
@@ -66,4 +91,9 @@
             </div>
         </div>
     </div>
+@endsection
+@section('script')
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 @endsection
