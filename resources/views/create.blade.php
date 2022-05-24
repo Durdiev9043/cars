@@ -35,29 +35,28 @@
                             <input type="hidden" name="car_id" value="{{$car->id}}">
                             <div class="form-group">
                                 <label for="">I.F.SH</label>
-                                <input type="text" class="form-control" name="full_name" placeholder="">
+                                <input type="text" required class="form-control" name="full_name" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="">Guvohnoma seriasi va raqami</label>
-                                <input type="text" class="form-control" name="certificate" placeholder="">
+                                <input type="text" required class="form-control" name="certificate" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="">Passport seriasi va raqami</label>
-                                <input type="text" class="form-control" name="passport" placeholder="">
+                                <input type="text" required class="form-control" name="passport" placeholder="">
                             </div>
 
                             <div class="form-group">
                                 <label for="">Qachondan boshlab</label>
-                                <input type="date" class="form-control" name="to_date" placeholder="">
+                                <input type="date" required class="form-control" name="to_date" placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="">Qachon gacha</label>
-                                <input type="date" class="form-control" name="from_date" placeholder="">
+                                <input type="date" required class="form-control" name="from_date" placeholder="">
                             </div>
                             <input type="hidden"  name="status" value="0">
 
                             <div align="center">
-
                                 <button type="submit" class="btn btn-primary">Saqlash</button>
                             </div>
                         </form>

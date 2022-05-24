@@ -45,6 +45,7 @@
                                     class="float-start text-dark badge rounded-pill "></span>
                                 <span class="float-end price-hp underline bg-danger">{{ Carbon\Carbon::parse($booking->to_date)->format("d-M Y") }}dan  {{ Carbon\Carbon::parse($booking->from_date)->format("d-M Y") }}gacha band</span></div>
                             @endif
+
                                     @endforeach
                             <div class="text-center my-4"><a href="{{ route('booking.create',$car->id) }}"
                                                              class="btn btn-warning">Ijaraga olish</a>
