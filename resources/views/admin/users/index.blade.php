@@ -5,13 +5,13 @@
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col-9"><h1 class="card-title">Касанчилар</h1></div>
+                    <div class="col-9"><h1 class="card-title">Foydalanuvchilar</h1></div>
                     <div class="col-md-1">
                         <a class="btn btn-primary" href="{{route('admin.users.create')}}">
                             <span class="btn-label">
                                 <i class="fa fa-plus"></i>
                             </span>
-                            кошиш
+                            Qo'shish
                         </a>
                     </div>
                 </div>
@@ -21,8 +21,8 @@
                         <thead>
                         <tr>
 
-                            <th  scope="col">номи</th>
-                            <th  scope="col">електрон почта</th>
+                            <th  scope="col">Nomi</th>
+                            <th  scope="col">Elektron pochta</th>
                         </tr>
                         </thead>
                         <tbody>
