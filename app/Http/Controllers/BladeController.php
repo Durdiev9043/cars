@@ -58,6 +58,7 @@ class BladeController extends Controller
                     return redirect()->back()->with('error','band');
                 }
             }else{
+                if (Carbon::parse($kun->from_date)->format("d-m-Y")<Carbon::parse($request->from_date)->format("d-m-Y")){
                 $id=Client::create([
                     'full_name'=>$request->full_name,
                     'certificate'=>$request->certificate,
@@ -69,7 +70,7 @@ class BladeController extends Controller
                     'to_date'=>$request->to_date,
                     'from_date'=>$request->from_date,
                     'status'=>$request->status
-                ]);
+                ]);}
             }
         }
 
