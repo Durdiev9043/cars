@@ -130,6 +130,7 @@
 
         today = yyyy+'-'+mm+'-'+dd;
         document.getElementById("start_time").setAttribute("min", today);
+        document.getElementById("end_time").setAttribute("min", today);
 
 
     </script>
