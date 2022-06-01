@@ -73,11 +73,11 @@
 
                             <div class="form-group">
                                 <label for="">Qachondan boshlab</label>
-                                <input type="date" required class="form-control" name="to_date" placeholder="">
+                                <input type="date"  id="start_time" required class="form-control" name="to_date"  placeholder="">
                             </div>
                             <div class="form-group">
                                 <label for="">Qachon gacha</label>
-                                <input type="date" required class="form-control" name="from_date" placeholder="">
+                                <input type="date" required onchange="end()" id="end_time" class="form-control" name="from_date" placeholder="">
                             </div>
                             <input type="hidden"  name="status" value="0">
 
@@ -92,7 +92,45 @@
     </div>
 @endsection
 @section('script')
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script>
 
+        function end() {
+
+            let min = $('#start_time').val();
+            let max = $('#end_time').val();
+
+            if (min > max) {
+                alert('boshlanish va tugash kunlarini tog`ri kiriting'
+                )
+                // swal({
+                //     icon: 'error',
+                //     title: 'Xatolik',
+                //     text: 'Kelish vaqti Ketish vaqtidan  kichik bolishi kerak.',
+                //     confirmButton: 'Continue',
+                // })
+                $('#end_time').val('');
+                $('#start_time').val('');
+            }
+            console.log(max)
+        }
+
+        var today = new Date();
+        var dd = today.getDate();
+        var mm = today.getMonth()+1; //January is 0 so need to add 1 to make it 1!
+        var yyyy = today.getFullYear();
+        if(dd<10){
+            dd='0'+dd
+        }
+        if(mm<10){
+            mm='0'+mm
+        }
+
+        today = yyyy+'-'+mm+'-'+dd;
+        document.getElementById("start_time").setAttribute("min", today);
+
+
+    </script>
 @endsection
