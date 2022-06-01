@@ -44,8 +44,8 @@ class BladeController extends Controller
         $day = Booking::all()->where('car_id', $request->car_id);
         if (count($day) > 0) {
             foreach ($day as $kun) {
-                if (Carbon::parse($kun->to_date)->format("d-m-Y") > Carbon::parse($request->to_date)->format("d-m-Y")) {
-                    if (Carbon::parse($kun->from_date)->format("d-m-Y") < Carbon::parse($request->from_date)->format("d-m-Y")) {
+                if (Carbon::parse($kun->to_date)->format("d-m-Y") > Carbon::parse($request->to_date)->format("d-m-Y")  && Carbon::parse($kun->to_date)->format("d-m-Y") <  Carbon::parse($request->from_date)->format("d-m-Y")) {
+                    if (Carbon::parse($kun->from_date)->format("d-m-Y") > Carbon::parse($request->from_date)->format("d-m-Y")) {
                         $id = Client::create([
                             'full_name' => $request->full_name,
                             'certificate' => $request->certificate,

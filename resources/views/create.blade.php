@@ -34,32 +34,32 @@
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Oldingi </span>
+                                <span class="visually-hidden">Previous</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Keyingi</span>
+                                <span class="visually-hidden">Next</span>
                             </button>
                         </div>
 
-                    {{--    <div class="col-6">
-                            <img src="{{asset($car->img1)}}" width="50%" height="150px" alt="">
-                        </div>
-                        <div class="col-6">
-                            <img src="{{asset($car->img2)}}" width="50%" height="150px" alt="">
-                        </div>
-                        <div class="col-6">
-                            <img src="{{asset($car->img3)}}" width="50%" height="150px" alt="">
-                        </div>
-                        <div class="col-6">
-                            <img src="{{asset($car->img4)}}" width="50%" height="150px" alt="">
-                        </div>--}}
+                        {{--    <div class="col-6">
+                                <img src="{{asset($car->img1)}}" width="50%" height="150px" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img src="{{asset($car->img2)}}" width="50%" height="150px" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img src="{{asset($car->img3)}}" width="50%" height="150px" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img src="{{asset($car->img4)}}" width="50%" height="150px" alt="">
+                            </div>--}}
                         <form action="{{ route('booking.store') }}" method="post">
                             @csrf
                             @method('POST')
                             <input type="hidden" name="car_id" value="{{$car->id}}">
                             <div class="form-group">
-                                <label for="">F.I.SH</label>
+                                <label for="">I.F.SH</label>
                                 <input type="text" required class="form-control" name="full_name" placeholder="">
                             </div>
                             <div class="form-group">
@@ -96,12 +96,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <script>
-
         function end() {
-
             let min = $('#start_time').val();
             let max = $('#end_time').val();
-
             if (min > max) {
                 alert('boshlanish va tugash kunlarini tog`ri kiriting'
                 )
@@ -116,7 +113,6 @@
             }
             console.log(max)
         }
-
         var today = new Date();
         var dd = today.getDate();
         var mm = today.getMonth()+1; //January is 0 so need to add 1 to make it 1!
@@ -127,11 +123,8 @@
         if(mm<10){
             mm='0'+mm
         }
-
         today = yyyy+'-'+mm+'-'+dd;
         document.getElementById("start_time").setAttribute("min", today);
         document.getElementById("end_time").setAttribute("min", today);
-
-
     </script>
 @endsection
