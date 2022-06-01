@@ -121,10 +121,10 @@
                     "infoEmpty": " ",
                     "search": "Qidirish:",
                     "paginate": {
-                        "first": "биринчи",
-                        "previous": "олдинги",
-                        "next": "кейинки",
-                        "last": "охирги"
+                        "first": "Birinchi",
+                        "previous": "Oldingi",
+                        "next": "Keyingi",
+                        "last": "Ohirgi"
                     },
                 }
             });

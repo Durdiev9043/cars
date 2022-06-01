@@ -34,11 +34,11 @@
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
+                                <span class="visually-hidden">Oldingi </span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
+                                <span class="visually-hidden">Keyingi</span>
                             </button>
                         </div>
 
@@ -59,7 +59,7 @@
                             @method('POST')
                             <input type="hidden" name="car_id" value="{{$car->id}}">
                             <div class="form-group">
-                                <label for="">I.F.SH</label>
+                                <label for="">F.I.SH</label>
                                 <input type="text" required class="form-control" name="full_name" placeholder="">
                             </div>
                             <div class="form-group">

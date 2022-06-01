@@ -22,7 +22,7 @@
                             <h5 class="card-title">{{ $car->company }} {{ $car->model }}</h5>
                             <div class="clearfix ">  <span
                                     class="float-start badge rounded-pill text-dark "><h6
-                                        style="margin: 0 !important;">Avtomabil raqazmi:</h6></span> <span
+                                        style="margin: 0 !important;">Avtomabil raqami:</h6></span> <span
                                     class="float-end price-hp underline">{{ $car->number }}</span>
 
                             </div>

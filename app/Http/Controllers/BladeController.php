@@ -27,6 +27,7 @@ class BladeController extends Controller
 
     public function store(Request $request){
 
+
         $request->validate([
             'full_name'=>'required',
             'certificate'=>'required',
