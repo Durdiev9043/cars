@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CarRequest;
 use App\Models\Booking;
 use App\Models\Car;
 use App\Models\Client;
@@ -27,19 +28,19 @@ class BladeController extends Controller
         return view('create', ['car' => $car]);
     }
 
-    public function store(Request $request)
+    public function store(CarRequest $request)
     {
 
 
-        $request->validate([
-            'full_name' => 'required',
-            'certificate' => 'required',
-            'passport' => 'required',
-            'car_id' => 'required',
-            'to_date' => 'required',
-            'from_date' => 'required',
-
-        ]);
+//        $request->validate([
+//            'full_name' => 'required',
+//            'certificate' => 'required',
+//            'passport' => 'required',
+//            'car_id' => 'required',
+//            'to_date' => 'required',
+//            'from_date' => 'required',
+//
+//        ]);
         $i = 0;
         $day = Booking::all()->where('car_id', $request->car_id);
         if (count($day) > 0) {
