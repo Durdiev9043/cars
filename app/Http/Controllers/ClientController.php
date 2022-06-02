@@ -52,7 +52,7 @@ class ClientController extends Controller
 //       $client->delete();
        if (Booking::all()->where('client_id',$client->id)->first()->delete()){
            if ($client->delete()){
-               return redirect()->back()-with('success','yarding');
+               return redirect()->back()-with('success','Deleted');
            }
        }
     }

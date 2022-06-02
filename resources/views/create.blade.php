@@ -54,6 +54,17 @@
                             <div class="col-6">
                                 <img src="{{asset($car->img4)}}" width="50%" height="150px" alt="">
                             </div>--}}
+                        <div>
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <strong>Xatolik!!!</strong><br><br>
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <form action="{{ route('booking.store') }}" method="post">
                             @csrf
                             @method('POST')
@@ -85,6 +96,7 @@
                                 <button type="submit" class="btn btn-primary">Saqlash</button>
                             </div>
                         </form>
+                        </div>
                     </div>
                 </div>
             </div>

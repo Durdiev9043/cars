@@ -4,7 +4,7 @@ namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 
-class CarRules implements Rule
+class PassportNum implements Rule
 {
     /**
      * Create a new rule instance.
@@ -13,7 +13,7 @@ class CarRules implements Rule
      */
     public function __construct()
     {
-
+        //
     }
 
     /**
@@ -28,9 +28,9 @@ class CarRules implements Rule
         $n=strlen($value); //9
         $seriya=substr($value,0,2);
         $ser=strtoupper($seriya);
-        $num=substr($value,3,$n-2);
+        $num=substr($value,2,$n-2);
 
-        if(is_numeric($num) && $seriya==$ser && $n==10){
+        if(is_numeric($num) && $seriya==$ser && $n==9){
             return true;
         }
         return false;
@@ -43,6 +43,6 @@ class CarRules implements Rule
      */
     public function message()
     {
-        return 'Trasport vositasi guvohnomasi raqamni shu formotda kiriting: AAA1234567';
+        return 'Passport seriya raqamni shu formotda kiriting: AA1234567';
     }
 }

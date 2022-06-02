@@ -82,7 +82,7 @@ class UsersController extends Controller
             'password' => Hash::make($request->password)
         ]);
         return redirect()->route('admin.users.index')
-            ->with('success', 'Успешно Обновлено');
+            ->with('success', 'muvaffaqiyatli yangilandi');
     }
 
     /**
@@ -93,6 +93,8 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = User::find($id);
+        $data->delete();
+        return redirect(route('admin.user.index'));
     }
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Rules\CarRules;
-use App\Rules\PhoneNumber;
+use App\Rules\PassportNum;
 use Illuminate\Foundation\Http\FormRequest;
 
 class CarRequest extends FormRequest
@@ -27,11 +27,11 @@ class CarRequest extends FormRequest
     {
         return [
             'full_name' => 'required',
-            'passport' => 'required',
             'car_id' => 'required',
             'to_date' => 'required',
             'from_date' => 'required',
             'certificate' => [ 'required',  new CarRules() ],
+            'passport' => [ 'required',  new PassportNum() ],
 
         ];
     }

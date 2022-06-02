@@ -80,7 +80,7 @@
                         </tr>
                         <tr>
                             <td>Qachongacha</td>
-                            <td> {{Carbon\Carbon::parse($client->to_date)->format("d-M Y")}}</td>
+                            <td> {{Carbon\Carbon::parse($client->from_date)->format("d-M Y")}}</td>
                         </tr>
                         <tr>
                             <td>To'lov haqida malumot</td>
