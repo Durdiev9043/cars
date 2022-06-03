@@ -61,19 +61,19 @@
                         </div>
                         <div class="form-group">
                             <label for="img1">Surati</label>
-                            <input type="file" name="img1" required class="form-control" id="img1"  >
+                            <input type="file" accept="image/*" name="img1" required class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
                             <label for="img1">Surati 2</label>
-                            <input type="file" name="img2"  class="form-control" id="img1"  >
+                            <input type="file"  accept="image/*" name="img2"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
                             <label for="img1">Surati 3</label>
-                            <input type="file" name="img3"  class="form-control" id="img1"  >
+                            <input type="file" accept="image/*" name="img3"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
                             <label for="img1">Surati 4</label>
-                            <input type="file" name="img4"  class="form-control" id="img1"  >
+                            <input type="file" accept="image/*" name="img4"  class="form-control" id="img1"  >
                         </div>
 
 {{--                        <div class="form-group">--}}
