@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CarRequest1;
 use App\Models\Car;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -20,7 +21,7 @@ class CarController extends Controller
         return view('admin.car.create');
     }
 
-    public function store(Request $request)
+    public function store(CarRequest1 $request)
     {
         //'year','yurgani','model','company','number','type_fuel','pass_number','price','status'
         if($request->hasFile('img1')){

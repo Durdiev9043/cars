@@ -43,6 +43,6 @@ class PassportNum implements Rule
      */
     public function message()
     {
-        return 'Passport seriya raqamni shu formotda kiriting: AA1234567';
+        return 'Passport seriya raqamni shu formatda kiriting: AA1234567';
     }
 }
