@@ -29,11 +29,11 @@
 
                         <div class="form-group">
                             <label for="">Yili</label>
-                            <input type="text" name="years" class="form-control" placeholder="">
+                            <input type="number" name="years" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="header_ru">Yurgani</label>
-                            <input type="text" name="yurgani" class="form-control" placeholder="">
+                            <input type="number" name="yurgani" class="form-control" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="header_ru">Modeli</label>
@@ -61,19 +61,19 @@
                         </div>
                         <div class="form-group">
                             <label for="img1">Surati</label>
-                            <input type="file" accept="image/*" name="img1" required class="form-control" id="img1"  >
+                            <input type="file" accept="image/*" capture="user"  name="img1" required class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
                             <label for="img1">Surati 2</label>
-                            <input type="file"  accept="image/*" name="img2"  class="form-control" id="img1"  >
+                            <input type="file"  accept="image/*" capture="user" name="img2"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
                             <label for="img1">Surati 3</label>
-                            <input type="file" accept="image/*" name="img3"  class="form-control" id="img1"  >
+                            <input type="file" accept="image/*" capture="user" name="img3"  class="form-control" id="img1"  >
                         </div>
                         <div class="form-group">
                             <label for="img1">Surati 4</label>
-                            <input type="file" accept="image/*" name="img4"  class="form-control" id="img1"  >
+                            <input type="file" accept="image/*"  capture="user" name="img4"  class="form-control" id="img1"  >
                         </div>
 
 {{--                        <div class="form-group">--}}

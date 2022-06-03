@@ -11,7 +11,7 @@
                             <span class="btn-label">
                                 <i class="fa fa-plus"></i>
                             </span>
-                            Qoshish
+                            Qo'shish
                         </a>
                     </div>
                 </div>

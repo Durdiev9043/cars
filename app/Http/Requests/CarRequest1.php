@@ -29,7 +29,7 @@ class CarRequest1 extends FormRequest
             'yurgani'=>'required',
             'model'=>'required',
             'company'=>'required',
-            'number'=>'required',
+            'number'=>'required | unique:cars',
             'img1'=>'',
             'img2'=>'',
             'img3'=>'',
