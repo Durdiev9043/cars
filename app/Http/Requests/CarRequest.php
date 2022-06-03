@@ -30,7 +30,7 @@ class CarRequest extends FormRequest
             'car_id' => 'required',
             'to_date' => 'required',
             'from_date' => 'required',
-            'certificate' => [ 'required',  new CarRules() ],
+            'certificate' => [ 'required',  new PassportNum() ],
             'passport' => [ 'required',  new PassportNum() ],
 
         ];
